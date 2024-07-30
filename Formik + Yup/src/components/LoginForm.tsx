@@ -10,8 +10,6 @@ const LoginForm = () => {
 
     email: yup.string()
       .required('Email is required')
-      .min(5, 'Email must be at least 5 characters long')
-      .max(20, 'Email must be not more than 20 characters')
       .matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Incorrect email format'),
 
     password: yup.string()
@@ -52,25 +50,6 @@ const LoginForm = () => {
       <button type="submit">Submit</button>
     </Form>
   </Formik>
-
-
 }
-
-
-//
-// <form onSubmit={handleSubmit}>
-//   <div className="form-group">
-//     <label htmlFor="login">Login</label>
-//     <input type="text" id="login"/>
-//   </div>
-
-//   <div className="form-group">
-//       <label htmlFor="password">Login</label>
-//       <input type="password" id="password"/>
-//   </div>
-//
-//     <button type="submit">Submit</button>
-//
-// </form>
 
 export default LoginForm
